@@ -20,7 +20,6 @@ class Echo {
                 x=x+1;
             }
             System.out.println(e2.count);
-            System.out.println("TEST");
         }
     }
 }
