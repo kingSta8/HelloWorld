@@ -3,12 +3,14 @@ public class Task1 {
 
         String[] LetterList = {"a","b","c","d","e"};
         String[] NumberList = {"0","2","4","6","8"};
+        String result;
 
-        /*int LetterLength = LetterList.length;
-        int NumberLength = NumberList.length;*/
+        int x = 0;
+        do {
+            result = LetterList[x].concat(NumberList[x]);
+            x++;
+            System.out.print(result);
+        } while (x<=4);
 
-        for (int x=0; x<=5; x++) {
-            System.out.print(String.join(NumberList[x],LetterList[x]));
-        }
     }
 }
