@@ -19,13 +19,13 @@ public class Task5 {
             password = "nickname";
         }
 
-        if (string.equals("средний")) {
-            /*password = letters[random % letters.length()];*/
+        /*if (string.equals("средний")) {
+            password = letters[random % letters.length()];
         }
 
         if (string.equals("сложный")) {
 
-        }
+        }*/
 
         System.out.println("Ваш пароль: "+password);
     }
