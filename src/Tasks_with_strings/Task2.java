@@ -1,3 +1,5 @@
+package Tasks_with_strings;
+
 import java.util.Scanner;
 
 public class Task2 {
