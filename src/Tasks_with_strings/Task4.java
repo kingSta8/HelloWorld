@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Task4 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.println("Здравствуйте! Данная программа преобразует арабское число в римское");
         System.out.print("Введите число: ");
         String string = in.nextLine();
         String res = "";

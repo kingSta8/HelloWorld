@@ -14,6 +14,7 @@ public class Task5 {
         String[] numbers = {"1","2","3","4","5","6","7","8","9","0"};
         String password = "";
         String answer;
+        String key;
 
         do {
 
@@ -39,12 +40,16 @@ public class Task5 {
                         password += letters[rand3].concat(numbers[rand4]);
                     }
                 } else {
-                    System.out.println("Что-то пошло не так! Попробуйте еще раз.");
+                    System.out.print("Что-то пошло не так! Попробуете еще раз? (да/нет) --> ");
+                    key = in.nextLine();
+                    if (key.equals("нет")) {
+                        break;
+                    }
                 }
 
             } while (password.equals(""));
 
-            System.out.println("Ваш пароль: " + password);
+            if (password != "" ) System.out.println("Ваш пароль: " + password);
             System.out.print("Сгенерировать пароль снова? (да/нет) -->  ");
             answer = in.nextLine();
         } while (answer.equals("да"));
