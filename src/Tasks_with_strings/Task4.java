@@ -3,56 +3,137 @@ package Tasks_with_strings;
 import java.util.Scanner;
 
 public class Task4 {
+
+        public static String convert(int in) {
+            StringBuffer a = new StringBuffer("");
+
+            int m1 = in / 1000;
+            a.append(M(m1));
+            int m2 = in % 1000;
+
+            int d1 = m2 / 500;
+            a.append(D(d1));
+            int d2 = m2 % 500;
+
+            int c1 = d2 / 100;
+            a.append(C(c1));
+            int c2 = d2 % 100;
+
+            int l1 = c2 / 50;
+            a.append(L(l1));
+            int l2 = c2 % 50;
+
+            int x1 = l2 / 10;
+            a.append(X(x1));
+            int x2 = l2 % 10;
+
+            a.append(basic(x2));
+            return a.toString();
+        }
+
+
+        private static String M(int in) {
+            StringBuffer a = new StringBuffer("");
+            int i = 0;
+            while (i < in) {
+                a.append("M");
+                i++;
+            }
+            return a.toString();
+        }
+
+        private static String C(int in) {
+            if (in == 4) return "CD"; /*если 400, то 500-100*/
+            else if ((in != 0) && (in < 4)) {
+                StringBuffer a = new StringBuffer("");
+                int i = 0;
+                while (i < in) {
+                    a.append("C");
+                    i++;
+                }
+                return a.toString();
+            }
+            else return "";
+        }
+
+        private static String X(int in) {
+            if (in == 4) return "XL"; /*если 40, то 50-10*/
+            else if ((in != 0) && (in < 4)) {
+                StringBuffer a = new StringBuffer("");
+                int i = 0;
+                while (i < in) {
+                    a.append("X");
+                    i++;
+                }
+                return a.toString();
+            }
+            else return "";
+        }
+
+        private static String D(int in) {
+
+            if (in == 4) return "CM"; /*если 900, то 1000-100*/
+            else if ((in != 0) && (in < 4)) {
+                StringBuffer a = new StringBuffer("");
+                int i = 0;
+                while (i < in) {
+                    a.append("D");
+                    i++;
+                }
+                return a.toString();
+            }
+            else return "";
+        }
+
+
+        private static String L(int in) {
+            if (in == 4) return "XC"; /*если 90, то 100 - 10*/
+            else if ((in != 0) && (in < 4)) {
+                StringBuffer a = new StringBuffer("");
+                int i = 0;
+                while (i < in) {
+                    a.append("L");
+                    i++;
+                }
+                return a.toString();
+            }
+            else return "";
+
+        }
+
+        private static String basic(int in) {
+            String[] a = {
+                    "",
+                    "I",
+                    "II",
+                    "III",
+                    "IV",
+                    "V",
+                    "VI",
+                    "VII",
+                    "VIII",
+                    "IX"
+            };
+            return a[in];
+        }
+
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Здравствуйте! Данная программа преобразует арабское число в римское");
-        System.out.print("Введите число: ");
-        String string = in.nextLine();
         String res = "";
-        /*String x = "";*/
+        String answer;
 
-
-        /*if (x == '1') { x = string.replaceAll("1","I")};
-        string.replaceAll("2","II");
-        string.replaceAll("3","III");
-        string.replaceAll("4","IV");
-        string.replaceAll("5","V");
-        string.replaceAll("6","VI");
-        string.replaceAll("7","VII");
-        string.replaceAll("8","VIII");
-        string.replaceAll("9","IX");
-
-        string.replaceAll("10","X");
-        string.replaceAll("20","XX");
-        string.replaceAll("30","XXX");
-        string.replaceAll("40","XL");
-        string.replaceAll("50","L");
-        string.replaceAll("60","LX");
-        string.replaceAll("70","LXX");
-        string.replaceAll("80","LXXX");
-        string.replaceAll("90","XC");
-
-        string.replaceAll("100","C");
-        string.replaceAll("200","CC");
-        string.replaceAll("300","CCC");
-        string.replaceAll("400","CD");
-        string.replaceAll("500","D");
-        string.replaceAll("600","DC");
-        string.replaceAll("700","DCC");
-        string.replaceAll("800","DCCC");
-        string.replaceAll("900","CM");*/
-
-
-       /* for (int i=1; i<=string.length(); i++) {
-            x.modif();
-            res = res.concat(x);
-        }*/
-        System.out.println("Ваше число римскими цифрами: "+res);
+        do {
+            System.out.print("Введите число: ");
+            String str = in.nextLine();
+            convert(Integer.parseInt(str));
+            res =  convert(Integer.parseInt(str));
+            System.out.println("Ваше число римскими цифрами: " + res);
+            System.out.print("Выполнить программу снова? (да/нет) -->  ");
+            answer = in.nextLine();
+        } while (answer.equals("да"));
+        System.out.println("До свидания! Хорошего дня!");
     }
-
-   /*public char modif() {
-
-        return x;
-    }*/
 
 }
