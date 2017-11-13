@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Task4 {
 
         public static String convert(int in) {
-            StringBuffer a = new StringBuffer("");
+            StringBuilder a = new StringBuilder("");
 
             int m1 = in / 1000;
             a.append(M(m1));
@@ -33,7 +33,7 @@ public class Task4 {
 
 
         private static String M(int in) {
-            StringBuffer a = new StringBuffer("");
+            StringBuilder a = new StringBuilder("");
             int i = 0;
             while (i < in) {
                 a.append("M");
@@ -45,7 +45,7 @@ public class Task4 {
         private static String C(int in) {
             if (in == 4) return "CD"; /*если 400, то 500-100*/
             else if ((in != 0) && (in < 4)) {
-                StringBuffer a = new StringBuffer("");
+                StringBuilder a = new StringBuilder("");
                 int i = 0;
                 while (i < in) {
                     a.append("C");
@@ -59,7 +59,7 @@ public class Task4 {
         private static String X(int in) {
             if (in == 4) return "XL"; /*если 40, то 50-10*/
             else if ((in != 0) && (in < 4)) {
-                StringBuffer a = new StringBuffer("");
+                StringBuilder a = new StringBuilder("");
                 int i = 0;
                 while (i < in) {
                     a.append("X");
@@ -74,7 +74,7 @@ public class Task4 {
 
             if (in == 4) return "CM"; /*если 900, то 1000-100*/
             else if ((in != 0) && (in < 4)) {
-                StringBuffer a = new StringBuffer("");
+                StringBuilder a = new StringBuilder("");
                 int i = 0;
                 while (i < in) {
                     a.append("D");
@@ -89,7 +89,7 @@ public class Task4 {
         private static String L(int in) {
             if (in == 4) return "XC"; /*если 90, то 100 - 10*/
             else if ((in != 0) && (in < 4)) {
-                StringBuffer a = new StringBuffer("");
+                StringBuilder a = new StringBuilder("");
                 int i = 0;
                 while (i < in) {
                     a.append("L");
@@ -102,18 +102,7 @@ public class Task4 {
         }
 
         private static String basic(int in) {
-            String[] a = {
-                    "",
-                    "I",
-                    "II",
-                    "III",
-                    "IV",
-                    "V",
-                    "VI",
-                    "VII",
-                    "VIII",
-                    "IX"
-            };
+            String[] a = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
             return a[in];
         }
 
