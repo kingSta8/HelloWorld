@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Task6 {
 
-    public static final String EXPLANATION_MESSAGE = " Данная программа меняет местами наибольшее и наименьшее по длине слова в веденной Вами строке.";
+    public static final String EXPLANATION_MESSAGE = "меняет местами наибольшее и наименьшее по длине слова в веденной Вами строке.";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

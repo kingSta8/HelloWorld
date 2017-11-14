@@ -3,10 +3,13 @@ package Tasks_with_strings;
 import java.util.Scanner;
 
 public class Task2 {
+
+    public static final String EXPLANATION_MESSAGE = "удаляет все цифры из строки.";
+
     public static void main(String[] args) {
        Scanner in = new Scanner(System.in);
         System.out.println(Constants.HELLO_MESSAGE);
-        System.out.println(" Данная программа удаляет все цифры из строки.");
+        System.out.println(EXPLANATION_MESSAGE);
         String answer;
 
         do {
