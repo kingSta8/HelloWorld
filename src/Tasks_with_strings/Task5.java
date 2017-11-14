@@ -10,6 +10,9 @@ public class Task5 {
     public static final String HARD_LEVEL = "Для сложного уровня наберите 'сложный'.";
     public static final String CHOSEN_LEVEL = "Выбранный уровень сложности: ";
     public static final String RESULT_MESSAGE = "Ваш пароль: ";
+    public static final String EASY = "простой";
+    public static final String MIDDLE = "средний";
+    public static final String HARD = "сложный";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -31,16 +34,16 @@ public class Task5 {
                 System.out.print(CHOSEN_LEVEL);
                 String string = in.nextLine();
 
-                if (string.equals("простой")) {
+                if (string.equals(EASY)) {
                     password = "nickname";
-                } else if (string.equals("средний")) {
+                } else if (string.equals(MIDDLE)) {
                     password = "";
                     for (int y = 1; y <= 3; y++) {
                         int rand1 = (int) (Math.random() * letters.length);
                         int rand2 = (int) (Math.random() * numbers.length);
                         password += letters[rand1].concat(numbers[rand2]);
                     }
-                } else if (string.equals("сложный")) {
+                } else if (string.equals(HARD)) {
                     password = "";
                     double x = Math.random() * 10;
                     for (int i = 0; i <= x; i++) {
