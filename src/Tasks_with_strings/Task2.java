@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Task2 {
 
     public static final String EXPLANATION_MESSAGE = "удаляет все цифры из строки.";
+    public static final String RESULT_MESSAGE = "Ваша строка без цифр: ";
 
     public static void main(String[] args) {
        Scanner in = new Scanner(System.in);
@@ -13,13 +14,13 @@ public class Task2 {
         String answer;
 
         do {
-        System.out.print("Введите строку: ");
+        System.out.print(Constants.ENTER_STRING);
         String string = in.nextLine();
         String res = string.replaceAll("[0-9]","");
-        System.out.println("Ваша строка без цифр: "+res);
-            System.out.print("Выполнить программу снова? (да/нет) -->  ");
+        System.out.println(RESULT_MESSAGE +res);
+            System.out.print(Constants.REPEAT_MESSAGE);
             answer = in.nextLine();
-        } while (answer.equals("да"));
-        System.out.println("До свидания! Хорошего дня!");
+        } while (answer.equals(Constants.YES));
+        System.out.println(Constants.GOOD_BYE_MESSAGE);
         }
     }
