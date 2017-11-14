@@ -107,6 +107,7 @@ public class Task4 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        /*int i = 2;*/
         System.out.print(Constants.HELLO_MESSAGE);
         System.out.println(EXPLANATION_MESSAGE);
         String res = "";
@@ -115,6 +116,14 @@ public class Task4 {
         do {
             System.out.print(Constants.ENTER_NUMBER);
             String str = in.nextLine();
+
+            /*if(in.hasNextInt()) { // возвращает истинну если с потока ввода можно считать целое число
+                i = in.nextInt(); // считывает целое число с потока ввода и сохраняем в переменную
+                System.out.println(i*2);
+            } else {
+                System.out.println("Вы ввели не целое число");
+            }*/
+
             convert(Integer.parseInt(str));
             res = convert(Integer.parseInt(str));
             System.out.println(RESULT_MESSAGE + res);
