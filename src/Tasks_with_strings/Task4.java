@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class Task4 {
 
-        public static String convert(int in) {
+    public static final String EXPLANATION_MESSAGE = "преобразует арабское число в римское";
+    public static final String RESULT_MESSAGE = "Ваше число римскими цифрами: ";
+
+    public static String convert(int in) {
             StringBuilder a = new StringBuilder("");
 
             int m1 = in / 1000;
@@ -109,20 +112,21 @@ public class Task4 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Здравствуйте! Данная программа преобразует арабское число в римское");
+        System.out.print(Constants.HELLO_MESSAGE);
+        System.out.println(EXPLANATION_MESSAGE);
         String res = "";
         String answer;
 
         do {
-            System.out.print("Введите число: ");
+            System.out.print(Constants.ENTER_NUMBER);
             String str = in.nextLine();
             convert(Integer.parseInt(str));
             res =  convert(Integer.parseInt(str));
-            System.out.println("Ваше число римскими цифрами: " + res);
-            System.out.print("Выполнить программу снова? (да/нет) -->  ");
+            System.out.println(RESULT_MESSAGE + res);
+            System.out.print(Constants.REPEAT_MESSAGE);
             answer = in.nextLine();
-        } while (answer.equals("да"));
-        System.out.println("До свидания! Хорошего дня!");
+        } while (answer.equals(Constants.YES));
+        System.out.println(Constants.GOOD_BYE_MESSAGE);
     }
 
 }
