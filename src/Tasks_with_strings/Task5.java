@@ -3,12 +3,21 @@ package Tasks_with_strings;
 import java.util.Scanner;
 
 public class Task5 {
+
+    public static final String EXPLANATION_MESSAGE = "предназначена для генерации паролей. Выберите уровень сложности для вашего пароля.";
+    public static final String EASY_LEVEL = "Для простого уровня наберите 'простой'.";
+    public static final String MIDDLE_LEVEL = "Для среднего уровня наберите 'средний'.";
+    public static final String HARD_LEVEL = "Для сложного уровня наберите 'сложный'.";
+    public static final String CHOSEN_LEVEL = "Выбранный уровень сложности: ";
+    public static final String RESULT_MESSAGE = "Ваш пароль: ";
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Здравствуйте! Вас приветствует программа генерации паролей. Выберите уровень сложности для вашего пароля.");
-        System.out.println("Для простого уровня наберите 'простой'.");
-        System.out.println("Для среднего уровня наберите 'средний'.");
-        System.out.println("Для сложного уровня наберите 'сложный'.");
+        System.out.print(Constants.HELLO_MESSAGE);
+        System.out.println(EXPLANATION_MESSAGE);
+        System.out.println(EASY_LEVEL);
+        System.out.println(MIDDLE_LEVEL);
+        System.out.println(HARD_LEVEL);
 
         String[] letters = {"q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"};
         String[] numbers = {"1","2","3","4","5","6","7","8","9","0"};
@@ -19,7 +28,7 @@ public class Task5 {
         do {
 
             do {
-                System.out.print("Выбранный уровень сложности: ");
+                System.out.print(CHOSEN_LEVEL);
                 String string = in.nextLine();
 
                 if (string.equals("простой")) {
@@ -40,19 +49,19 @@ public class Task5 {
                         password += letters[rand3].concat(numbers[rand4]);
                     }
                 } else {
-                    System.out.print("Что-то пошло не так! Попробуете еще раз? (да/нет) --> ");
+                    System.out.print(Constants.SOMETHING_WAS_WRONG);
                     key = in.nextLine();
-                    if (key.equals("нет")) {
+                    if (key.equals(Constants.NO)) {
                         break;
                     }
                 }
 
             } while (password.equals(""));
 
-            if (password != "" ) System.out.println("Ваш пароль: " + password);
-            System.out.print("Сгенерировать пароль снова? (да/нет) -->  ");
+            if (password != "" ) System.out.println(RESULT_MESSAGE + password);
+            System.out.print(Constants.REPEAT_MESSAGE);
             answer = in.nextLine();
-        } while (answer.equals("да"));
-        System.out.println("До свидания! Хорошего дня!");
+        } while (answer.equals(Constants.YES));
+        System.out.println(Constants.GOOD_BYE_MESSAGE);
     }
 }
