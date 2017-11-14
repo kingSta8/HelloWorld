@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Task7 {
 
-    public static final String EXPLANATION_MESSAGE = "предназначена для определения правильности расстановки скобок в выражении.";
-    public static final String ENTER_EXPRESSION = "Введите математическое выражение: ";
-    public static final String BKT_IN_EXPRESSION = "Скобки в выражениии ";
-    public static final String INCORRECT = " расставлены неправильно.";
-    public static final String CORRECT = " расставлены правильно.";
+    private static final String EXPLANATION_MESSAGE = "предназначена для определения правильности расстановки скобок в выражении.";
+    private static final String ENTER_EXPRESSION = "Введите математическое выражение: ";
+    private static final String BKT_IN_EXPRESSION = "Скобки в выражениии ";
+    private static final String INCORRECT = " расставлены неправильно.";
+    private static final String CORRECT = " расставлены правильно.";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

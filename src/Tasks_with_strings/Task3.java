@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Task3 {
 
-    public static final String EXPLANATION_MESSAGE = "меняет подряд идущие пробелы на один пробел.";
-    public static final String RESULT_MESSAGE = "Ваша строка без подряд идущих пробелов: ";
+    private static final String EXPLANATION_MESSAGE = "меняет подряд идущие пробелы на один пробел.";
+    private static final String RESULT_MESSAGE = "Ваша строка без подряд идущих пробелов: ";
 
     public static void main(String[] args) {
     Scanner in = new Scanner(System.in);

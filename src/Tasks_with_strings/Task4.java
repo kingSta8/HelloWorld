@@ -122,6 +122,9 @@ public class Task4 {
             String str = in.nextLine();
             convert(Integer.parseInt(str));
             res =  convert(Integer.parseInt(str));
+
+
+
             System.out.println(RESULT_MESSAGE + res);
             System.out.print(Constants.REPEAT_MESSAGE);
             answer = in.nextLine();

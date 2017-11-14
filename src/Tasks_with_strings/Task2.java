@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Task2 {
 
-    public static final String EXPLANATION_MESSAGE = "удаляет все цифры из строки.";
-    public static final String RESULT_MESSAGE = "Ваша строка без цифр: ";
+    private static final String EXPLANATION_MESSAGE = "удаляет все цифры из строки.";
+    private static final String RESULT_MESSAGE = "Ваша строка без цифр: ";
 
     public static void main(String[] args) {
        Scanner in = new Scanner(System.in);

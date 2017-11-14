@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Task5 {
 
-    public static final String EXPLANATION_MESSAGE = "предназначена для генерации паролей. Выберите уровень сложности для вашего пароля.";
-    public static final String EASY_LEVEL = "Для простого уровня наберите 'простой'.";
-    public static final String MIDDLE_LEVEL = "Для среднего уровня наберите 'средний'.";
-    public static final String HARD_LEVEL = "Для сложного уровня наберите 'сложный'.";
-    public static final String CHOSEN_LEVEL = "Выбранный уровень сложности: ";
-    public static final String RESULT_MESSAGE = "Ваш пароль: ";
-    public static final String EASY = "простой";
-    public static final String MIDDLE = "средний";
-    public static final String HARD = "сложный";
+    private static final String EXPLANATION_MESSAGE = "предназначена для генерации паролей. Выберите уровень сложности для вашего пароля.";
+    private static final String EASY_LEVEL = "Для простого уровня наберите 'простой'.";
+    private static final String MIDDLE_LEVEL = "Для среднего уровня наберите 'средний'.";
+    private static final String HARD_LEVEL = "Для сложного уровня наберите 'сложный'.";
+    private static final String CHOSEN_LEVEL = "Выбранный уровень сложности: ";
+    private static final String RESULT_MESSAGE = "Ваш пароль: ";
+    private static final String EASY = "простой";
+    private static final String MIDDLE = "средний";
+    private static final String HARD = "сложный";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

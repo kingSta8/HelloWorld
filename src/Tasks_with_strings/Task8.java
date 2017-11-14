@@ -3,8 +3,8 @@ package Tasks_with_strings;
 import java.util.Scanner;
 
 public class Task8 {
-    public static final String EXPLANATION_MESSAGE = "меняет camelCase на snake_case.";
-    public static final String RESULT_MESSAGE = "Измененная строка: ";
+    private static final String EXPLANATION_MESSAGE = "меняет camelCase на snake_case.";
+    private static final String RESULT_MESSAGE = "Измененная строка: ";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
