@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Task4 {
 
-    private static final String EXPLANATION_MESSAGE = "преобразует арабское число в римское";
+    private static final String EXPLANATION_MESSAGE = "преобразует арабское число в римское.";
     private static final String RESULT_MESSAGE = "Ваше число римскими цифрами: ";
 
     private static String convert(int in) {
