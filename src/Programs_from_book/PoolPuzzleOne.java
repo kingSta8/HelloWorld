@@ -1,3 +1,5 @@
+package Programs_from_book;
+
 public class PoolPuzzleOne {
     public static void main (String[] args){
         int x=0;

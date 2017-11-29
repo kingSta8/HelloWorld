@@ -1,3 +1,5 @@
+package Programs_from_book;
+
 public class GameLauncher {
     public static void main(String[] args) {
         GameLauncher.GuessGame game = new GameLauncher.GuessGame();

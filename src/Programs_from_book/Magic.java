@@ -1,3 +1,5 @@
+package Programs_from_book;
+
 public class Magic {
     public static void main(String[] args) {
         /* System.out.println("*");

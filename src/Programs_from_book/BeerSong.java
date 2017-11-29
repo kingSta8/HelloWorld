@@ -1,3 +1,5 @@
+package Programs_from_book;
+
 public class BeerSong {
     public static void main(String[] args) {
         int BeerNum=99;

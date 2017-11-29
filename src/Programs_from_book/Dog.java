@@ -1,3 +1,5 @@
+package Programs_from_book;
+
 class Dog {
     String name;
     public static void main(String[] args) {

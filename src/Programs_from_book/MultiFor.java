@@ -1,3 +1,5 @@
+package Programs_from_book;
+
 public class MultiFor {
     public static void main(String[] args) {
         for (int x=0; x<4; x++) {

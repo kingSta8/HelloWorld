@@ -1,3 +1,5 @@
+package Programs_from_book;
+
 import java.io.*;
 
 public class SimpleDotCom {
