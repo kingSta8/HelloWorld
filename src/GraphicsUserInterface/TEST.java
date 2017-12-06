@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class TEST {
-    JFrame frame1;
-    JPanel panel1;
-    JPanel panel2;
+    private JFrame frame1;
+    private JPanel panel1;
+    private JPanel panel2;
 
     private static final String TEST = "Тест 'Познай себя'";
     private static final String NEXT = "Далее";
@@ -37,7 +37,7 @@ public class TEST {
     private void go() {
         frame1 = new JFrame(TEST);
         frame1.setSize(500, 200);
-        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         JButton button1 = new JButton(NEXT);
         button1.addActionListener(new ButtonListenerNext());
