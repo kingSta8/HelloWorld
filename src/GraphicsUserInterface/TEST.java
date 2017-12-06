@@ -34,7 +34,7 @@ public class TEST {
         test.go();
     }
 
-    public void go() {
+    private void go() {
         frame1 = new JFrame(TEST);
         frame1.setSize(500, 200);
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,7 +64,7 @@ public class TEST {
         }
     }
 
-    public void go2() {
+    private void go2() {
         panel1.revalidate();
         frame1.remove(panel1);
 
@@ -91,7 +91,7 @@ public class TEST {
         }
     }
 
-    public void go3() {
+    private void go3() {
         String message = "";
         message += "Поздравляю, " + input.getText() + ", вы ";
         message += ((radio1.isSelected()) ? BEAU : UGLY);
