@@ -6,7 +6,6 @@ import java.awt.event.*;
 public class TEST {
     private JFrame frame1;
     private JPanel panel1;
-    private JPanel panel2;
 
     private static final String TEST = "Тест 'Познай себя'";
     private static final String NEXT = "Далее";
@@ -71,7 +70,7 @@ public class TEST {
         JButton button2 = new JButton(RESULT);
         button2.addActionListener(new ButtonListenerRes());
 
-        panel2 = new JPanel();
+        JPanel panel2 = new JPanel();
         panel2.add(label3);
         ButtonGroup group = new ButtonGroup();
         group.add(radio3);
