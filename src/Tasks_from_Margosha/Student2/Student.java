@@ -1,9 +1,9 @@
 package Tasks_from_Margosha.Student2;
 
 public class Student {
-    public String surname;
-    public int age;
-    public boolean indebtedness;
+    private String surname;
+    private int age;
+    private boolean indebtedness;
 
     public Student() {
     }
@@ -24,7 +24,43 @@ public class Student {
         this.indebtedness = Indebtedness;
     }
 
-    public void print(){
+    private int getAge() {
+        return age;
+    }
 
+    private String getSurname() {
+        return surname;
+    }
+
+    private boolean isIndebtedness() {
+        return indebtedness;
+    }
+
+    public static int MiddleAge(Student[] stud) {
+        int mid = 0;
+        for (int i = 0; i < 5; i++) {
+            mid += stud[i].age;
+        }
+        return (mid / 5);
+    }
+
+    public static int StudMust(Student[] stud) {
+        int must = 0;
+        for (int i = 0; i < 5; i++)
+            if (stud[i].indebtedness)
+                must++;
+        return must;
+    }
+
+    public void print() {
+        System.out.println("Студент " + this.getSurname() + "\n" +  this.getAge() + " (возраст)");
+
+        if (this.isIndebtedness()) {
+            System.out.println("Имеет задолженность.");
+        }
+        if (!this.isIndebtedness()) {
+            System.out.println("Не имеет задолженности.");
+
+        }
     }
 }

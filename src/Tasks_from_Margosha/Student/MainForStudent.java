@@ -15,8 +15,8 @@ public class MainForStudent {
             stud[i].print();
         }
 
-        System.out.println("Средний возраст студентов: "/*+MiddleAge*/);
-        System.out.println("Количество студентов с задолженностями: "/*+StudMust*/);
+        System.out.println("Средний возраст студентов: "+Student.MiddleAge(stud));
+        System.out.println("Количество студентов с задолженностями: "+Student.StudMust(stud));
 
     }
 }
